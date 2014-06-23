@@ -8,3 +8,4 @@ composer.lock
 Thumbs.db
 /nbproject/private/
 app/config/
+/_ide_helper.php
