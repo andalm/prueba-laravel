@@ -1,4 +1,4 @@
-<?php
+<?php namespace Contratame\Entities;
 
 /**
  * Usuarios

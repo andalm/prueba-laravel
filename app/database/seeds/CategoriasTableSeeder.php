@@ -1,5 +1,7 @@
 <?php
 
+use Contratame\Entities\Categorias;
+
 class CategoriasTableSeeder extends Seeder {
 
 	public function run()
