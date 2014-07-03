@@ -15,4 +15,9 @@
  */
 class Candidatos extends \Eloquent {
 	protected $fillable = [];
+        
+    public function usuario()
+    {
+        return $this->hasOne('Contratame\Entities\Usuarios', 'id', 'id');
+    }
 }

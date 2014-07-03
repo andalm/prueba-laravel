@@ -11,4 +11,9 @@
  */
 class Categorias extends \Eloquent {
 	protected $fillable = [];
+        
+    public function candidatos()
+    {
+        return $this->hasMany('Contratame\Entities\Candidatos');
+    }
 }

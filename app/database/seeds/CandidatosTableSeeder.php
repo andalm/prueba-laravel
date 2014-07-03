@@ -31,7 +31,7 @@ class CandidatosTableSeeder extends Seeder {
                             'medio tiempo',
                             'trabajo en casa',
                             ]),
-                        'categoria_id' => $faker->randomElement([1, 2, 3]),
+                        'categorias_id' => $faker->randomElement([1, 2, 3]),
                         'disponible' => true,
                         'slug' => \Str::slug($nombre),
                     ]);

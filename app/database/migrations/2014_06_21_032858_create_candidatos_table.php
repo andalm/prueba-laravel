@@ -23,11 +23,11 @@ class CreateCandidatosTable extends Migration {
                             'trabajo en casa',
                             ]
                         );
-                        $table->integer('categoria_id')->unsigned();
+                        $table->integer('categorias_id')->unsigned();
                         $table->boolean('disponible');
                         $table->string('slug');
                         
-                        $table->foreign('categoria_id')->references('id')->on('categorias');
+                        $table->foreign('categorias_id')->references('id')->on('categorias');
 			$table->timestamps();
 		});
 	}
