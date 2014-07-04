@@ -6,7 +6,8 @@
         "require-dev": {
             "way/generators": "2.*",
             "fzaninotto/faker": "v1.3.0",
-            "barryvdh/laravel-ide-helper" : "1.*"
+            "barryvdh/laravel-ide-helper" : "1.*",
+            "barryvdh/laravel-debugbar": "1.*"
         },
 	"require": {
 		"laravel/framework": "4.2.*"
