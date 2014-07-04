@@ -18,9 +18,9 @@ class CreateCandidatosTable extends Migration {
                         $table->string('sitio_web');
                         $table->text('descripcion');
                         $table->enum('trabajo_tipo', [
-                            'tiempo completo', 
-                            'medio tiempo',
-                            'trabajo en casa',
+                            'full', 
+                            'partial',
+                            'freelance',
                             ]
                         );
                         $table->integer('categorias_id')->unsigned();

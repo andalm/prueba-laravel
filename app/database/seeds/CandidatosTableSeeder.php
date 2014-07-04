@@ -26,10 +26,10 @@ class CandidatosTableSeeder extends Seeder {
                         'id' => $usuario->id,
                         'sitio_web' => $faker->url,
                         'descripcion' => $faker->text(200),
-                        'trabajo_tipo' => $faker->randomElement([
-                            'tiempo completo', 
-                            'medio tiempo',
-                            'trabajo en casa',
+                        'trabajo_tipo' => $faker->randomElement( [
+                            'full', 
+                            'partial',
+                            'freelance',
                             ]),
                         'categorias_id' => $faker->randomElement([1, 2, 3]),
                         'disponible' => true,
