@@ -20,4 +20,14 @@ class Candidatos extends \Eloquent {
     {
         return $this->hasOne('Contratame\Entities\Usuarios', 'id', 'id');
     }
+    
+    public function categoria()
+    {
+        return $this->belongsTo('\Contratame\Entities\Categorias', 'categorias_id', 'id');
+    }
+    
+    public function getTrabajoTipoTitleAttribute()
+    {
+        return \Lang::get('utils.trabajo_tipo.' . $this->trabajo_tipo);
+    }
 }
