@@ -14,17 +14,32 @@
                         <th>Descripción</th>
                         <th>Ver</th>
                     </tr>
-                    @foreach ($categoria->candidatos as $candidato)
+                    @foreach ($categoria->paginate_candidatos as $candidato)
                         <tr>
                             <td>{{ $candidato->usuario->nombre_completo }}</td>
-                            <td>{{ $candidato->trabajo_tipo }}</td>
+                            <td>{{ $candidato->trabajo_tipo_title }}</td>
                             <td>{{ $candidato->descripcion }}</td>
                             <td>
-                                <a href="#" class="btn btn-primary" role="button">Ver</a>
+                                {{ 
+                                    link_to_route(
+                                        "candidato",
+                                        "Ver", 
+                                        [
+                                            "$candidato->slug",
+                                            "$candidato->id",
+                                        ], 
+                                        [
+                                            "class" => "btn btn-primary",
+                                            "role" => "button"
+                                        ]
+                                    ) 
+                                }}
                             </td>
                         </tr>                       
                     @endforeach
                 </table>
+                
+                {{ $categoria->paginate_candidatos->links() }}
                 
                 <p>Copyright {{ date('Y') }}</p>
             </div>

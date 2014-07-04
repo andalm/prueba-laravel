@@ -16,4 +16,9 @@ class Categorias extends \Eloquent {
     {
         return $this->hasMany('Contratame\Entities\Candidatos');
     }
+    
+    public function getPaginateCandidatosAttribute()
+    {
+        return Candidatos::where('categorias_id', $this->id)->paginate(3);
+    }
 }
